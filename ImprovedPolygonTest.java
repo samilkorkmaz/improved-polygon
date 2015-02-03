@@ -9,8 +9,8 @@ import static org.junit.Assert.*;
  */
 public class ImprovedPolygonTest {
     
-    private final int[] xArray = {0, 5, 10, 15, 15};
-    private final int[] yArray = {0, 5, 3, 10, 0};
+    private final int[] xArray = {0, 5, 10, 15, 15, 0};
+    private final int[] yArray = {0, 5, 3, 10, 0, 0};
     ImprovedPolygon ip = new ImprovedPolygon(xArray, yArray, xArray.length);
 
     public ImprovedPolygonTest() {
