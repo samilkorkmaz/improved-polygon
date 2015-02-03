@@ -28,6 +28,10 @@ public class ImprovedPolygon extends Polygon {
 
     public ImprovedPolygon(int[] xPoints, int[] yPoints, int nPoints, final double tolerance) {
         super(xPoints, yPoints, nPoints);
+        //It must be a closed polygon, otherwise the overriden contains() method might not work properly
+        if (xPoints[0] != xPoints[xPoints.length-1] || yPoints[0] != yPoints[yPoints.length-1]) {
+            throw new IllegalArgumentException("Must be a closed polygon (i.e. last point must be the same as first point)!");
+        }
     }
 
     @Override
